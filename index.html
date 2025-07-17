@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+
+
+</head>
+<!--Body starts here-->
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+<!--Div1 for bg-image that will go to nev bar-->
+<div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]"><!---dark:hidden---if necessary-->>
+<img src="./images/soft3.png" alt="" class="w-full ">
+</div>
+<!--div1 end-->
+
+<!--nev bar -->
+<nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-transparent">
+<!--my name logo-->
+<img src="./images/tanvi3.png" alt="tanvi_logo" class="w-28 cursor-pointer mr-14">
+<!--lists in nav-->
+<ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white 
+shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/50 dark:bg-transparent">
+    <li><a href="#top">Home</a></li>
+    <li><a href="#about">About me</a></li>
+    <li><a href="#What I Do">What I Do</a></li>
+    <li><a href="#work">My Work</a></li>
+    <li><a href="#contact">Contact me</a></li>
+</ul>
+<!--list end-->
+
+<!--div2 for moon and contact and arrow-->
+<div class="flex items-center gap-4">
+<!--moon button-->
+<button onclick="toggleTheme()">
+    <img src="./images/moon_icon.png" alt="moon" class="w-5 dark:hidden">
+    <img src="./images/sun-icon.png" alt="moon" class="w-6 hidden dark:block">
+</button>
+
+<!---------link for contact-------  -->
+<a href="#contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border
+  border-gray-500
+ rounded-full ml-4 font-Ovo dark:border-white/50">
+Contact 
+<img src="./images/black-cross-icon.png" alt="arrow" class="w-3 dark:hidden">
+<img src="./images/white-cross-arrow.png" alt="arrow" class="w-3 hidden dark:block">
+</a>
+
+<!--menu button-->
+<button class="block md:hidden ml-3" onclick="openmenu()">
+    <img src="./images/dark-menu.png" alt="" class="w-6 dark:hidden">
+    <img src="./images/white-menu.png" alt="" class="w-6 hidden dark:block">
+</button>
+</div>
+<!--div2 end-->
+
+
+<!--mobile menu-->
+<ul id="sidemenu" class="flex md:hidden flex-col gap-4 py-20 px-10 -right-64 fixed top-0 
+bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white"> 
+<!--div3 for menu bar-->
+<div class="absolute right-6 top-6" onclick="closemenu()">
+    <img src="./images/x1.png" alt="" class="w-8 cursor-pointer dark:hidden">
+    <img src="./images/x-white.png" alt="" class="w-4 cursor-pointer hidden dark:block">
+</div>
+<!--div3 end-->
+
+<li><a href="#top" onclick="closemenu()">Home</a></li>
+<li><a href="#about" onclick="closemenu()">About me</a></li>
+<li><a href="#What I Do" onclick="closemenu()">What I Do</a></li>
+<li><a href="#work" onclick="closemenu()">My Work</a></li>
+<li><a href="#contact" onclick="closemenu()">Contact me</a></li>
+</ul>
+<!--mobile menu end-->
+    
+        
+</nav>
+<!--mobile menu end-->
+
+<!--header-->
+
+<div class="w-11/12 max-w-3x1 text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <img src="./images/p3.png" alt="" class=" w-56 mx-auto">
+    <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3 font-Ovo">
+        Hi! I'm Tanvi Pawar 
+        <img src="./images/hand-icon.png" alt="" class="w-6">
+    </h3>
+    <h1 class="text-3xl sm:text-5xl lg:text-[60px] font-Ovo">
+        Aspiring Full-Stack Developer<br> from India
+    </h1>
+    <p class="max-w-2xl mx-auto font-Ovo">
+       I'm learning full-stack development with a focus on Python and frontend 
+       technologies. My goal is to build real-world web apps that are both functional 
+       and visually appealing.
+
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a href="#contact" 
+        class="px-10 py-3 border-none rounded-full bg-gradient-to-r from-[#e620b5] to-[#da7d20]
+         text-white flex items-center gap-2 dark:border-transparent">
+         Contact me <img src="./images/white-right-arrow.png" alt="white-arrow" class="w-6">
+        </a>
+
+        <a href="./images/Tanvi Pawar - Resume.pdf" download
+        class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white
+        dark:text-black">
+         my resume <img src="./images/download2.png" alt="white-arrow" class="w-5">
+        </a>    
+    </div>    
+</div>   
+
+<!--about me-->
+<div class="w-full px-[12%] py-10 scroll-m-20" id="about">
+    <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
+    <h2 class="text-center text-5xl font-Ovo">About me</h2>
+
+    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+        <div class="max-w-max mx-auto relative">
+            <img src="./images/l4.png" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none">
+
+        <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full
+        translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+        <img src="./images/c4.png" alt="" class="w-full animate-spin_slow">
+        <img src="./images/web-developer-emoji.png" alt="dev-icon" class="w-1/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        </div>
+
+        </div>
+        <div class="flex-1">
+            <p class="mb-10 max-w-2xl font-Ovo">
+                I'm a developer exploring full-stack web development with a focus on 
+                Python and frontend technologies. I enjoy solving real-world problems, 
+                learning by building, and constantly improving my skills. Currently, 
+                I'm working on projects that combine clean design with strong backend 
+                logic.
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-LightHover hover:-translate-y-1 duration-500 
+                hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                    <!-- Icons -->
+                    <img src="./images/code-icon-white.png" alt="" class="w-7 mt-3 dark:hidden">
+                    <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                     <!-- Title -->
+                     <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
+                     <!-- Frontend + Backend -->
+                    <div class="text-gray-600 text-sm dark:text-white/80">
+                        <p><span class="text-gray-500 dark:text-gray-300 font-semibold">Frontend:</span> HTML, CSS, JavaScript, Angular, UI/UX</span></p>
+                        <p><span class="text-gray-500 dark:text-gray-300 font-semibold">Backend:</span> Python, MySQL</p>
+                    </div>
+                </li>
+
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-LightHover hover:-translate-y-1 duration-500 
+                hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50 ">
+                    <img src="./images/edu-icon-white.png" alt="" class="w-7 mt-3 dark:hidden">
+                    <img src="./images/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                     <h3 class="my-4 font-semibold text-gray-700  dark:text-white">Education</h3>
+                    <p class="text-gray-600 text-sm  dark:text-white/80">Bachlore of Computor Applications (BCA)</p>
+                </li>
+
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-LightHover hover:-translate-y-1 duration-500 
+                hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50 ">
+                    <!-- Light/Dark Icons -->
+                    <img src="./images/project-icon-white.png" alt="" class="w-7 mt-3 dark:hidden">
+                    <img src="./images/project-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                    <!-- Section Title -->
+                     <h3 class="my-4 font-semibold text-gray-700  dark:text-white">Projects</h3>
+                     <!-- Bullet List -->
+                    
+                      <ul class="list-disc list-inside text-gray-600 text-sm dark:text-white/80 space-y-1">
+                        <li>Career Guidance Chatbot</li>
+                        <li>Portfolio Website</li>
+                        <li>2D Platformer Game</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4 class="my-6 text-gray-700 font-Ovo  dark:text-white/80">Tools i use</h4>
+
+            <ul class="flex items-center gap-3 sm:gap-5">
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 
+                rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/vs-icon.png" alt="vscode" class="w-5 sm:w-7">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 
+                rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/pycharm-icon.png" alt="vscode" class="w-5 sm:w-7">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 
+                rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/git-icon.webp" alt="vscode" class="w-5 sm:w-7">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-------------What I Do----------- -->
+<div id="What I Do" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg font-Ovo">how I help</h4>
+    <h2 class="text-center text-5xl font-Ovo">What I Can Do</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I enjoy building full-stack web apps, 
+        solving logic problems with Python, and designing responsive user interfaces.   
+    </p>
+
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
+
+    <div class="border border-gray-400 rounded-lg px-8 py-12
+    hover:shadow-black cursor-pointer hover:bg-LightHover hover:-translate-y-1 
+    duration-500 dark:hover:bg-darkHover dark:hover:shadow-white
+    flex flex-col items-start justify-start text-left h-full">
+        <img src="./images/coding.png" alt="web-icon" class="w-10 mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-white mb-2">Web development</h3>
+        <p class="text-sm text-gray-600 leading-5 dark:text-white/80">I build responsive, user-friendly websites using HTML, CSS, JavaScript, and Angular.</p>
+        
+    </div>
+
+    <div class="border border-gray-400 rounded-lg px-8 py-12
+    hover:shadow-black cursor-pointer hover:bg-LightHover hover:-translate-y-1 
+    duration-500 dark:hover:bg-darkHover dark:hover:shadow-white
+    flex flex-col items-start justify-start text-left h-full">
+        <img src="./images/python.png" alt="web-icon" class="w-10 mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-white mb-2">Python Projects</h3>
+        <p class="text-sm text-gray-600 leading-5 dark:text-white/80">I enjoy creating tools, games, and backend logic with Python, Pygame, and Flask.</p>
+        
+        
+    </div>
+
+    <div class="border border-gray-400 rounded-lg px-8 py-12
+    hover:shadow-black cursor-pointer hover:bg-LightHover hover:-translate-y-1 
+    duration-500 dark:hover:bg-darkHover dark:hover:shadow-white
+    flex flex-col items-start justify-start text-left h-full">
+        <img src="./images/bug.png" alt="web-icon" class="w-10 mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-white mb-2">Debugging & Problem Solving</h3>
+        <p class="text-sm text-gray-600 leading-5 dark:text-white/80">I love solving bugs and learning new technologies while helping others debug their code too.</p>
+        
+        
+    </div>
+
+    <div class="border border-gray-400 rounded-lg px-8 py-12
+    hover:shadow-black cursor-pointer hover:bg-LightHover hover:-translate-y-1 
+    duration-500 dark:hover:bg-darkHover dark:hover:shadow-white
+    flex flex-col items-start justify-start text-left h-full">
+        <img src="./images/lightbulb.png" alt="web-icon" class="w-10 mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-white mb-2">Learning & Growth</h3>
+        <p class="text-sm text-gray-600 leading-5 dark:text-white/80">I'm continuously exploring new tools, frameworks, and ideas to improve my skills and build better projects.</p>
+        
+        
+    </div>
+
+  </div>
+
+</div>
+
+<!------------my work----------->
+<div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
+    <h2 class="text-center text-5xl font-Ovo">My latest Work</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+        Here are some of my personal projects, including games and apps 
+        built with Python. Click on any card to view its code on GitHub. 
+    </p>
+
+    <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
+        <!------------my work 1--------   --->
+        <div class="aspect-square bg-[url('./images/platformer.jpg')] 
+                    bg-no-repeat bg-cover bg-center rounded-lg
+                    relative cursor-pointer group">
+            <a href="https://github.com/tanvip97/Platformer-Game" target="_blank">               
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center
+                        justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold ">Platformer</h2>
+                        <p class="text-sm text-gray-700">Python Game</p>
+                    </div>
+                
+                    <div class="border rounded-full border-black w-9 aspect-square flex 
+                            items-center justify-center shadow-[2px_2px_0_#000]
+                                group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="send-icon" class="w-5">
+                    </div>
+                
+                </div>
+           </a>
+        </div>
+        <!------------my work 2--------  --->
+        <div class="aspect-square bg-[url('./images/space-shooter.jpg')] 
+                    bg-no-repeat bg-cover bg-center rounded-lg
+                    relative cursor-pointer group">
+            <a href="https://github.com/tanvip97/Space-Shooter" target="_blank">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center
+                        justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Space-shooter</h2>
+                        <p class="text-sm text-gray-700">Python Game</p>
+                    </div>
+                    
+                    <div class="border rounded-full border-black w-9 aspect-square flex 
+                            items-center justify-center shadow-[2px_2px_0_#000]
+                                group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="send-icon" class="w-5">
+                    </div>
+                </div>
+            </a>    
+        </div>
+        <!------------my work 3---------  -->
+        <div class="aspect-square bg-[url('./images/work-3.jpg')] 
+                    bg-no-repeat bg-cover bg-center rounded-lg
+                    relative cursor-pointer group">
+            <a href="https://github.com/tanvip97/Python-Banking-Program-" target="_blank">        
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center
+                        justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold ">Banking program</h2>
+                        <p class="text-sm text-gray-700">Python</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex 
+                            items-center justify-center shadow-[2px_2px_0_#000]
+                                group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="send-icon" class="w-5">
+                    </div>
+                </div>
+            </a>    
+        </div>
+        <!------------my work 4---------  -->
+        <div class="aspect-square bg-[url('./images/work-4.jpg')] 
+                    bg-no-repeat bg-cover bg-center rounded-lg
+                    relative cursor-pointer group">
+            <a href="https://github.com/tanvip97/Credit-card-validator" target="_blank">       
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center
+                        justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold ">Creditcard Validator</h2>
+                        <p class="text-sm text-gray-700">Python</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex 
+                            items-center justify-center shadow-[2px_2px_0_#000]
+                                group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="send-icon" class="w-5">
+                    </div>
+                </div>
+            </a> 
+        </div>
+    </div>
+
+   <!-- HIDDEN EXTRA PROJECTS -->
+    <div id="extraProjectsWrapper" class="hidden">
+        <div id="extraProjects" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 dark:text-black">
+
+            <!-- work 5 -->
+            <div class="aspect-square bg-[url('./images/consession.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <a href="https://github.com/tanvip97/Concession-stand-program" target="_blank">
+                    <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Concession Stand Program</h2>
+                        <p class="text-sm text-gray-700">Python</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="send-icon" class="w-5">
+                    </div>
+                    </div>
+                </a>
+            </div>
+
+        
+
+        </div>
+
+        <!-- SHOW LESS BUTTON (Inside the hidden section) -->
+        <a href="#" id="showLessBtn" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px]
+        border-gray-700 rounded-full py-3 px-10 mx-auto mt-10 hover:bg-LightHover duration-700
+        dark:text-white dark:border-white dark:hover:bg-darkHover">Show Less
+            <img src="./images/right-arrow.png" alt="" class="w-4 dark:hidden rotate-180">
+            <img src="./images/white-right-arrow.png" alt="" class="w-4 hidden dark:block rotate-180">
+        </a>
+    </div>
+
+        <!-- SHOW MORE BUTTON -->
+        <a href="#" id="showMoreBtn" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px]
+        border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-LightHover duration-700
+        dark:text-white dark:border-white dark:hover:bg-darkHover">Show More
+        <img src="./images/right-arrow.png" alt="" class="w-4 dark:hidden">
+        <img src="./images/white-right-arrow.png" alt="" class="w-4 hidden dark:block">
+        </a>
+
+    
+</div>
+
+<!------------Contact----------->
+
+<div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/soft-glow.png')]
+ bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
+    <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
+    <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+        I'd love to hear from you! If you have any questions, comments or feedback, please use the form below. 
+    </p>
+
+    <form method="post" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+        <input type="hidden" name="access_key" value="de454596-2bcb-44dc-b47c-e6bb59ee575a">
+        <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+            <input type="text" placeholder="Enter your name" name="name"
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md
+             bg-white dark:bg-darkHover/30 dark:border-white/90"
+             required>
+
+            <input type="email" placeholder="Enter your email" name="email"
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
+             dark:bg-darkHover/30 dark:border-white/90" required>
+        </div>
+        <textarea rows="6" placeholder="Enter your message" name="message"
+          class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6
+           dark:bg-darkHover/30 dark:border-white/90" required></textarea>
+
+        <button class="py-3 px-8 w-max flex items-center justify-between
+         gap-2 bg-black/60 text-white rounded-full mx-auto hover:bg-black duration-500
+         dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">
+            Submit now
+            <img src="./images/white-right-arrow.png" alt="" class="w-4">
+        </button>
+    </form>
+</div>
+
+<!--------------footer------------  -->
+
+<div class="mt-20">
+    <div class="text-center">
+        
+        <div class="w-max flex items-center gap-2 mx-auto ">
+            <img src="./images/mail-icon.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/email-white.png" alt="" class="w-6 hidden dark:block">
+            tanvipawar977@gmail.com
+        </div>
+    </div>
+
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400
+     mx-[10%] mt-12 py-6">
+        <p>© 2025 Tanvi Pawar. All rights reserved.</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+           
+            <li><a href="https://github.com/tanvip97" target="_blank">Github</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<script src="./script.js"></script><!--script for js-->
+  
+</body>
+<!--body end-->
+
+</html> 
